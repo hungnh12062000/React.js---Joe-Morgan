@@ -1,6 +1,10 @@
 import React from 'react';
 import './App.css';
 import Instructions from '../Instructions/Instructions';
+import AnimalCard from '../AnimalCard/AnimalCard';
+
+import data from './data';
+
 
 function App() {
 
@@ -20,6 +24,13 @@ function App() {
     }
   ];
 
+  function showAdditional(additional) {
+    const alertInformation = Object.entries(additional)
+      .map(information => `${information[0]}: ${information[1]}`)
+      .join('\n');
+    alert(alertInformation)
+  };
+
   return (
     <div className="container">
       <h1>Emoji Search</h1>
@@ -38,6 +49,21 @@ function App() {
           ))
         }
       </ul>
+
+      <div className="wrapper">
+        <h1>Animals</h1>
+        {data.map(animal => (
+          <AnimalCard
+            additional={animal.additional}
+            diet={animal.diet}
+            key={animal.name}
+            name={animal.name}
+            scientificName={animal.scientificName}
+            showAdditional={showAdditional}
+            size={animal.size}
+          />
+        ))}
+      </div>
 
     </div>
   );

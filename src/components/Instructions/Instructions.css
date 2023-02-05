@@ -1,0 +1,9 @@
+.instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+p.instructions {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}

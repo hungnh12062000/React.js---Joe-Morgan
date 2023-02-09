@@ -1,0 +1,20 @@
+.alert {
+  padding: 15px;
+  margin-bottom: 15px;
+  min-width: 350px;
+}
+.alert > h2 {
+  margin: 0 0 10px 0;
+}
+.alert-success {
+  border: #6da06f solid 1px;
+}
+.alert-success > h2 {
+  color: #6da06f;
+}
+.alert-error {
+  border: #f56260 solid 1px;
+}
+.alert-error > h2 {
+  color: #f56260;
+}

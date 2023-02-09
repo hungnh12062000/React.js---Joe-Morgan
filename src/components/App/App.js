@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Instructions from '../Instructions/Instructions';
 import AnimalCard from '../AnimalCard/AnimalCard';
+import Alert from '../Alert/Alert';
+import CartSuccess from '../CartSuccess/CartSuccess';
 
 import data from './data';
 
@@ -65,6 +67,14 @@ function App() {
         ))}
       </div>
 
+      {/* alert */}
+      <Alert message={'Items Not Added!'} type={'error'}>
+        <p>There was an error adding your items to the cart.</p>
+      </Alert>
+      <Alert message={'Added Items success!'} type={'success'}>
+        <p>Items added to cart successfully.</p>
+      </Alert>
+      <CartSuccess />
     </div>
   );
 }
